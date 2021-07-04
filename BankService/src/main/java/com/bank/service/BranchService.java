@@ -62,7 +62,7 @@ public class BranchService {
 	 * @throws ResourceNotFoundException
 	 */
 	public BranchServiceEntity getBranchById(Long branchId) {
-		if(branchServiceDao.findById(branchId).isEmpty()) {
+		if(!branchServiceDao.findById(branchId).isPresent()) {
 			throw new ResourceNotFoundException("604","Given branchId is not found");
 		}
 		return branchServiceDao.findById(branchId).get();

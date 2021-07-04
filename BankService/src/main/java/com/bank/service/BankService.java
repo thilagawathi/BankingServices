@@ -55,7 +55,7 @@ public class BankService {
 	 * Throws ResourceNotFound exception
 	 */
 	public BankServiceEntity getBankById(Long bankid) {
-		if(bankServiceRepository.findById(bankid).isEmpty()) {
+		if(!bankServiceRepository.findById(bankid).isPresent()) {
 		throw new ResourceNotFoundException("610", "Bank id not found");
 		}else {
 	    return bankServiceRepository.findById(bankid).get();
@@ -86,7 +86,7 @@ public class BankService {
 	 */
 	public void deleteById(Long bankId) {
 		Optional<BankServiceEntity> deleteById=bankServiceRepository.findById(bankId);
-		if(deleteById.isEmpty()) {
+		if(!deleteById.isPresent()) {
 			throw new ResourceNotFoundException("611", "Given bank id not found");
 		}
 		bankServiceRepository.deleteById(bankId);
