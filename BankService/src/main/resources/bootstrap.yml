@@ -1,0 +1,4 @@
+# Bank Service
+spring:
+  application:
+    name: BankService
