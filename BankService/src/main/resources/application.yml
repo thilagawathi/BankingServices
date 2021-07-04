@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/bankservice
-    username: postgres
-    password: 123
+    url: jdbc:postgresql://ec2-54-164-241-193.compute-1.amazonaws.com:5432/d73gtittbng3fg
+    username: wptlimmsrdyiyi
+    password: 5eeb0c4f73369e979c57775435b12a4d2394498a25cf7743ed1d1ca3f405f6c9
     platform: postgres
     driver-class-name: org.postgresql.Driver
     initialization-mode: always
